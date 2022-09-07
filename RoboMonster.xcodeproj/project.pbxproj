@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		E7B2068C28C8BC10003D9CA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B2068B28C8BC10003D9CA8 /* AppDelegate.swift */; };
 		E7B2068E28C8BC10003D9CA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B2068D28C8BC10003D9CA8 /* SceneDelegate.swift */; };
-		E7B2069028C8BC10003D9CA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B2068F28C8BC10003D9CA8 /* ViewController.swift */; };
+		E7B2069028C8BC10003D9CA8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B2068F28C8BC10003D9CA8 /* TableViewController.swift */; };
 		E7B2069328C8BC10003D9CA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B2069128C8BC10003D9CA8 /* Main.storyboard */; };
 		E7B2069528C8BC11003D9CA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7B2069428C8BC11003D9CA8 /* Assets.xcassets */; };
 		E7B2069828C8BC11003D9CA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7B2069628C8BC11003D9CA8 /* LaunchScreen.storyboard */; };
+		E7B206A028C8BC27003D9CA8 /* Robot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B2069F28C8BC27003D9CA8 /* Robot.swift */; };
+		E7B206A228C8D492003D9CA8 /* RobotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B206A128C8D492003D9CA8 /* RobotViewController.swift */; };
+		E7B206A428C8E32C003D9CA8 /* Communication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B206A328C8E32C003D9CA8 /* Communication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E7B2068828C8BC10003D9CA8 /* RoboMonster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoboMonster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7B2068B28C8BC10003D9CA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7B2068D28C8BC10003D9CA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E7B2068F28C8BC10003D9CA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E7B2068F28C8BC10003D9CA8 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		E7B2069228C8BC10003D9CA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7B2069428C8BC11003D9CA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7B2069728C8BC11003D9CA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7B2069928C8BC11003D9CA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7B2069F28C8BC27003D9CA8 /* Robot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Robot.swift; sourceTree = "<group>"; };
+		E7B206A128C8D492003D9CA8 /* RobotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotViewController.swift; sourceTree = "<group>"; };
+		E7B206A328C8E32C003D9CA8 /* Communication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +62,12 @@
 		E7B2068A28C8BC10003D9CA8 /* RoboMonster */ = {
 			isa = PBXGroup;
 			children = (
+				E7B206A328C8E32C003D9CA8 /* Communication.swift */,
+				E7B2069F28C8BC27003D9CA8 /* Robot.swift */,
+				E7B206A128C8D492003D9CA8 /* RobotViewController.swift */,
 				E7B2068B28C8BC10003D9CA8 /* AppDelegate.swift */,
 				E7B2068D28C8BC10003D9CA8 /* SceneDelegate.swift */,
-				E7B2068F28C8BC10003D9CA8 /* ViewController.swift */,
+				E7B2068F28C8BC10003D9CA8 /* TableViewController.swift */,
 				E7B2069128C8BC10003D9CA8 /* Main.storyboard */,
 				E7B2069428C8BC11003D9CA8 /* Assets.xcassets */,
 				E7B2069628C8BC11003D9CA8 /* LaunchScreen.storyboard */,
@@ -138,8 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7B2069028C8BC10003D9CA8 /* ViewController.swift in Sources */,
+				E7B206A028C8BC27003D9CA8 /* Robot.swift in Sources */,
+				E7B2069028C8BC10003D9CA8 /* TableViewController.swift in Sources */,
+				E7B206A428C8E32C003D9CA8 /* Communication.swift in Sources */,
 				E7B2068C28C8BC10003D9CA8 /* AppDelegate.swift in Sources */,
+				E7B206A228C8D492003D9CA8 /* RobotViewController.swift in Sources */,
 				E7B2068E28C8BC10003D9CA8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
