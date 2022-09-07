@@ -52,10 +52,25 @@ class TableViewController: UITableViewController , UISearchBarDelegate {
     }
     
 
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+
+        if editingStyle == .delete {
+
+            // remove the item from the data model
+            robots.remove(at: indexPath.row)
+            
+            updateInterface()
+            // delete the table view row
+            //tableView.deleteRows(at: [indexPath], with: .fade)
+
+        } else if editingStyle == .insert {
+            // Not used in our example, but if you were adding a new row, this is where you would do it.
+        }
+    }
     
                   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var index = self.tableView.indexPathForSelectedRow?.row
+        let index = self.tableView.indexPathForSelectedRow?.row
         
         if let index = index, index != NSNotFound, index > -1 {
             let detailViewController = segue.destination as! RobotViewController
