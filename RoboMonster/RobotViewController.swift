@@ -16,7 +16,6 @@ class RobotViewController: UIViewController {
         super.viewDidLoad()
 
         
-        
         if let robot = robot {
             if robot.avatar == nil
             {

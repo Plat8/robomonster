@@ -28,6 +28,7 @@ class TableViewController: UITableViewController , UISearchBarDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
     
     
+    // MARK: - TableView Delegate methods
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
@@ -68,7 +69,8 @@ class TableViewController: UITableViewController , UISearchBarDelegate {
         }
     }
     
-                  
+    // MARK: - Preparing Segue Transition
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let index = self.tableView.indexPathForSelectedRow?.row
         
@@ -81,13 +83,13 @@ class TableViewController: UITableViewController , UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 
         updateInterface()
-        
     }
     
+    
+    //MARK: New Monster Entity
     @IBAction func createNewPush(_ sender: Any) {
         
         let alert = UIAlertController(title: "New Robot", message: "Type New Robot Name", preferredStyle: .alert)
-        
         
         alert.addTextField()
         
@@ -107,6 +109,7 @@ class TableViewController: UITableViewController , UISearchBarDelegate {
         present(alert, animated: true)
     }
     
+    //MARK: update
     func updateInterface()
     {
         let searchText = searchBar.text!
