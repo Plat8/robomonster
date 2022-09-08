@@ -26,7 +26,11 @@ class Robot
     }
     
     var name : String
-    var type : RoboType = RoboType.Robot
+    var type : RoboType = RoboType.Robot{
+        didSet(newType){
+            self.avatar = nil
+        }
+    }
     var avatar : UIImage?
     
     init(name: String, type: RoboType)

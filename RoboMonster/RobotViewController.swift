@@ -16,6 +16,14 @@ class RobotViewController: UIViewController {
         super.viewDidLoad()
 
         
+        updateRobot()
+        
+        // Do any additional setup after loading the view.
+        updateInterface()
+    }
+    
+    func updateRobot()
+    {
         if let robot = robot {
             if robot.avatar == nil
             {
@@ -26,12 +34,7 @@ class RobotViewController: UIViewController {
                 }
             }
         }
-        
-        // Do any additional setup after loading the view.
-        updateInterface()
     }
-    
-    
     
     func updateInterface()
     {
@@ -46,8 +49,8 @@ class RobotViewController: UIViewController {
             let sizeLabel = self.view.viewWithTag(3) as! UILabel
             sizeLabel.text = robot.avatar?.size.debugDescription
             
-            let typeLabel = self.view.viewWithTag(4) as! UILabel
-            typeLabel.text = robot.type.description
+            let typeButton = self.view.viewWithTag(4) as! UIButton
+            typeButton.setTitle(robot.type.description, for: .normal)
             
         }
     }
@@ -65,5 +68,61 @@ class RobotViewController: UIViewController {
         
     }
     
+    @IBAction func typeByttonPush(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Monster Type", message: "Please Select a Type", preferredStyle: .actionSheet)
+           
+           alert.addAction(UIAlertAction(title: "Robot", style: .default , handler:{ (UIAlertAction)in
+               if let robot = self.robot {
+                   robot.type = .Robot
+                   self.updateRobot()
+               }
+               
+               print("User click Robot button")
+           }))
+           
+           alert.addAction(UIAlertAction(title: "Monster", style: .default , handler:{ (UIAlertAction)in
+               
+               if let robot = self.robot {
+                   robot.type = .Monster
+                   self.updateRobot()
+               }
+               
+               print("User click Monster button")
+           }))
 
+           alert.addAction(UIAlertAction(title: "Face", style: .default , handler:{ (UIAlertAction)in
+               
+               if let robot = self.robot {
+                   robot.type = .Face
+                   self.updateRobot()
+               }
+               
+               print("User click Face button")
+           }))
+           
+           alert.addAction(UIAlertAction(title: "Kitty", style: .default, handler:{ (UIAlertAction)in
+               
+               if let robot = self.robot {
+                   robot.type = .Kitten
+                   self.updateRobot()
+               }
+               
+               print("User click Kitty button")
+           }))
+        
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler:{ (UIAlertAction)in
+                print("User click Dismiss button")
+            }))
+
+           
+           //uncomment for iPad Support
+            alert.popoverPresentationController?.sourceView = sender as? UIView
+
+           self.present(alert, animated: true, completion: {
+               print("completion block")
+           })
+        
+    }
+    
 }
