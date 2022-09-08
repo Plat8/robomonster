@@ -49,19 +49,21 @@ class RobotViewController: UIViewController {
             let typeLabel = self.view.viewWithTag(4) as! UILabel
             typeLabel.text = robot.type.description
             
-            
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func shareButtonPush(_ sender: Any) {
+        
+        if let avatar = robot?.avatar
+        {
+            
+            let shareController = UIActivityViewController.init(activityItems: [ (avatar)], applicationActivities:[])
+            shareController.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
+            
+            self .present(shareController, animated: true)
+        }
+        
     }
-    */
+    
 
 }

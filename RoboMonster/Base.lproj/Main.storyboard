@@ -135,7 +135,13 @@
                             <constraint firstItem="Son-2n-1ek" firstAttribute="top" secondItem="YXz-Sy-HGY" secondAttribute="top" constant="10" id="p78-R8-wTM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="xjX-1d-cn5"/>
+                    <navigationItem key="navigationItem" id="xjX-1d-cn5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="5kF-r5-VdP">
+                            <connections>
+                                <action selector="shareButtonPush:" destination="eBZ-LL-gCC" id="L36-bn-UqO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2v-3y-fCg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
