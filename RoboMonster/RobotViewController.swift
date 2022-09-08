@@ -11,6 +11,7 @@ class RobotViewController: UIViewController {
 
     var robot : Robot?
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +28,11 @@ class RobotViewController: UIViewController {
         if let robot = robot {
             if robot.avatar == nil
             {
+                activityIndicator.startAnimating()
                 Task{
                     let image = try await Communication.loadImage(robot: robot)
                     robot.avatar = image
+                    activityIndicator.stopAnimating()
                     updateInterface()
                 }
             }
