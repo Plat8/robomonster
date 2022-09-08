@@ -89,7 +89,7 @@ class TableViewController: UITableViewController , UISearchBarDelegate {
     //MARK: New Monster Entity
     @IBAction func createNewPush(_ sender: Any) {
         
-        let alert = UIAlertController(title: "New Robot", message: "Type New Robot Name", preferredStyle: .alert)
+        let alert = UIAlertController(title: "New Robot", message: "Type Your Name", preferredStyle: .alert)
         
         alert.addTextField()
         

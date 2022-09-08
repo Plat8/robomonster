@@ -16,7 +16,18 @@
 		E7B206A028C8BC27003D9CA8 /* Robot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B2069F28C8BC27003D9CA8 /* Robot.swift */; };
 		E7B206A228C8D492003D9CA8 /* RobotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B206A128C8D492003D9CA8 /* RobotViewController.swift */; };
 		E7B206A428C8E32C003D9CA8 /* Communication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B206A328C8E32C003D9CA8 /* Communication.swift */; };
+		E7B206AC28C9A946003D9CA8 /* RoboMonsterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B206AB28C9A946003D9CA8 /* RoboMonsterTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E7B206AD28C9A946003D9CA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7B2068028C8BC10003D9CA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7B2068728C8BC10003D9CA8;
+			remoteInfo = RoboMonster;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E7B2068828C8BC10003D9CA8 /* RoboMonster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoboMonster.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,10 +41,19 @@
 		E7B2069F28C8BC27003D9CA8 /* Robot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Robot.swift; sourceTree = "<group>"; };
 		E7B206A128C8D492003D9CA8 /* RobotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotViewController.swift; sourceTree = "<group>"; };
 		E7B206A328C8E32C003D9CA8 /* Communication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communication.swift; sourceTree = "<group>"; };
+		E7B206A928C9A946003D9CA8 /* RoboMonsterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoboMonsterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7B206AB28C9A946003D9CA8 /* RoboMonsterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoboMonsterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E7B2068528C8BC10003D9CA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7B206A628C9A946003D9CA8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				E7B2068A28C8BC10003D9CA8 /* RoboMonster */,
+				E7B206AA28C9A946003D9CA8 /* RoboMonsterTests */,
 				E7B2068928C8BC10003D9CA8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				E7B2068828C8BC10003D9CA8 /* RoboMonster.app */,
+				E7B206A928C9A946003D9CA8 /* RoboMonsterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,6 +96,14 @@
 				E7B2069928C8BC11003D9CA8 /* Info.plist */,
 			);
 			path = RoboMonster;
+			sourceTree = "<group>";
+		};
+		E7B206AA28C9A946003D9CA8 /* RoboMonsterTests */ = {
+			isa = PBXGroup;
+			children = (
+				E7B206AB28C9A946003D9CA8 /* RoboMonsterTests.swift */,
+			);
+			path = RoboMonsterTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +126,24 @@
 			productReference = E7B2068828C8BC10003D9CA8 /* RoboMonster.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E7B206A828C9A946003D9CA8 /* RoboMonsterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7B206AF28C9A946003D9CA8 /* Build configuration list for PBXNativeTarget "RoboMonsterTests" */;
+			buildPhases = (
+				E7B206A528C9A946003D9CA8 /* Sources */,
+				E7B206A628C9A946003D9CA8 /* Frameworks */,
+				E7B206A728C9A946003D9CA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7B206AE28C9A946003D9CA8 /* PBXTargetDependency */,
+			);
+			name = RoboMonsterTests;
+			productName = RoboMonsterTests;
+			productReference = E7B206A928C9A946003D9CA8 /* RoboMonsterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -108,6 +156,10 @@
 				TargetAttributes = {
 					E7B2068728C8BC10003D9CA8 = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					E7B206A828C9A946003D9CA8 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = E7B2068728C8BC10003D9CA8;
 					};
 				};
 			};
@@ -125,6 +177,7 @@
 			projectRoot = "";
 			targets = (
 				E7B2068728C8BC10003D9CA8 /* RoboMonster */,
+				E7B206A828C9A946003D9CA8 /* RoboMonsterTests */,
 			);
 		};
 /* End PBXProject section */
@@ -137,6 +190,13 @@
 				E7B2069828C8BC11003D9CA8 /* LaunchScreen.storyboard in Resources */,
 				E7B2069528C8BC11003D9CA8 /* Assets.xcassets in Resources */,
 				E7B2069328C8BC10003D9CA8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7B206A728C9A946003D9CA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +216,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E7B206A528C9A946003D9CA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7B206AC28C9A946003D9CA8 /* RoboMonsterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E7B206AE28C9A946003D9CA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7B2068728C8BC10003D9CA8 /* RoboMonster */;
+			targetProxy = E7B206AD28C9A946003D9CA8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E7B2069128C8BC10003D9CA8 /* Main.storyboard */ = {
@@ -348,6 +424,42 @@
 			};
 			name = Release;
 		};
+		E7B206B028C9A946003D9CA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.RoboMonsterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RoboMonster.app/RoboMonster";
+			};
+			name = Debug;
+		};
+		E7B206B128C9A946003D9CA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.RoboMonsterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RoboMonster.app/RoboMonster";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -365,6 +477,15 @@
 			buildConfigurations = (
 				E7B2069D28C8BC11003D9CA8 /* Debug */,
 				E7B2069E28C8BC11003D9CA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7B206AF28C9A946003D9CA8 /* Build configuration list for PBXNativeTarget "RoboMonsterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7B206B028C9A946003D9CA8 /* Debug */,
+				E7B206B128C9A946003D9CA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
