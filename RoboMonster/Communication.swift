@@ -32,8 +32,9 @@ public class Communication
     static func loadImage(robot: Robot) async throws -> UIImage?{
         
         let api = "https://robohash.org/"
-        let endpoint = robot.name + robot.type.type2url()
-        let url = URL(string: api + endpoint )
+        let endpoint = (robot.name.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? robot.name) + robot.type.type2url()
+
+        let url = URL(string: api + endpoint)
         
         let (data, _) = try await session.data(from: url!)
         let image = UIImage(data: data)
