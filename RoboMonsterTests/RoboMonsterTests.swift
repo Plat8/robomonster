@@ -43,6 +43,18 @@ class RoboMonsterTests: XCTestCase {
     }
     
 
-
+    func testPerformanceExample() throws {
+        // This is an example of a performance test case.
+        measure {
+            
+            let robot = Robot(name: "Платон", type: .Monster)
+            Task {
+                let image = try await Communication.loadImage(robot: robot)
+                XCTAssert(image != nil,  "Pass" )
+                [self .stopMeasuring()]
+            }
+            // Put the code you want to measure the time of here.
+        }
+    }
 
 }
