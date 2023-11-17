@@ -25,18 +25,17 @@ class RobotViewController: UIViewController {
     
     func updateRobot()
     {
-        if let robot = robot {
-            if robot.avatar == nil
-            {
-                activityIndicator.startAnimating()
-                Task{
-                    let image = try await Communication.loadImage(robot: robot)
-                    robot.avatar = image
-                    activityIndicator.stopAnimating()
-                    updateInterface()
-                }
+        if let robot = robot, robot.avatar == nil
+        {
+            activityIndicator.startAnimating()
+            Task{
+                let image = try await Communication.loadImage(robot: robot)
+                self.robot = robot.copy(avatar: image)
+                activityIndicator.stopAnimating()
+                updateInterface()
             }
         }
+        
     }
     
     func updateInterface()
@@ -76,40 +75,33 @@ class RobotViewController: UIViewController {
         let alert = UIAlertController(title: "Monster Type", message: "Please Select a Type", preferredStyle: .actionSheet)
            
            alert.addAction(UIAlertAction(title: "Robot", style: .default , handler:{ (UIAlertAction)in
-               if let robot = self.robot {
-                   robot.type = .Robot
-                   self.updateRobot()
-               }
+               
+               self.robot = Robot(name: self.robot?.name ?? "", type: .Robot)
+               self.updateRobot()
                
                print("User click Robot button")
            }))
            
            alert.addAction(UIAlertAction(title: "Monster", style: .default , handler:{ (UIAlertAction)in
                
-               if let robot = self.robot {
-                   robot.type = .Monster
-                   self.updateRobot()
-               }
+               self.robot = Robot(name: self.robot?.name ?? "", type: .Monster)
+               self.updateRobot()
                
                print("User click Monster button")
            }))
 
            alert.addAction(UIAlertAction(title: "Face", style: .default , handler:{ (UIAlertAction)in
                
-               if let robot = self.robot {
-                   robot.type = .Face
-                   self.updateRobot()
-               }
+               self.robot = Robot(name: self.robot?.name ?? "", type: .Face)
+               self.updateRobot()
                
                print("User click Face button")
            }))
            
            alert.addAction(UIAlertAction(title: "Kitty", style: .default, handler:{ (UIAlertAction)in
                
-               if let robot = self.robot {
-                   robot.type = .Kitten
-                   self.updateRobot()
-               }
+               self.robot = Robot(name: self.robot?.name ?? "", type: .Kitten)
+               self.updateRobot()
                
                print("User click Kitty button")
            }))

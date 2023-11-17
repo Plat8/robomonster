@@ -14,19 +14,16 @@ extension Robot.RoboType
     func type2url() -> String
     {
         switch self {
-        // Use Internationalization, as appropriate.
         case .Robot: return ""
         case .Monster: return "?set=set2"
         case .Kitten: return "?set=set4"
         case .Face: return "?set=set3"
         }
     }
-
 }
 
 public class Communication
 {
-    
     
     static let session = URLSession.shared
     static func loadImage(robot: Robot) async throws -> UIImage?{

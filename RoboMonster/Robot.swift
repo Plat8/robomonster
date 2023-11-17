@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-
 class Robot
 {
     public enum RoboType
@@ -25,20 +24,26 @@ class Robot
         }
     }
     
-    var name : String
-    var type : RoboType = RoboType.Robot{
-        didSet(newType){
-            self.avatar = nil
-        }
-    }
-    var avatar : UIImage?
+    let name : String
+    let type : RoboType
+    let avatar : UIImage?
     
-    init(name: String, type: RoboType)
-    {
+    init(name: String, type: RoboType, avatar: UIImage? = nil) {
         self.name = name
         self.type = type
+        self.avatar = avatar
     }
     
     
+    func copy(name: String? = nil, 
+              type: RoboType? = nil,
+              avatar: UIImage? = nil) -> Robot
+    {
+        return Robot(
+            name: name ?? self.name,
+            type: type ?? self.type,
+            avatar: avatar ?? self.avatar
+        )
+    }
     
 }
